@@ -8,7 +8,7 @@ pipeline{
   
   stages{
    stage('CheckOutCode'){
-     sendSlackNotifications("STARTED")
+   sendSlackNotifications("STARTED")
    steps{
    git branch: 'development', credentialsId: 'bed94d51-4cec-4bf0-83ff-c69b8dfa6209', url: 'https://github.com/devopsmt-jan-2024/maven-web-application2.git'
    }

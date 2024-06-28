@@ -5,16 +5,16 @@ pipeline{
   tools {
    maven 'maven3.9.6'
   }
-  sh "echo The Job name is: ${env.JOB_NAME}"
-  sh "echo The Nod ename is: ${env.NODE_NAME}"
-  sh "echo The Build Number is: ${env.BUILD_NUMBER}"
-  sh "echo The Jenkins Home directory is: ${JENKINS_HOME}"
   
   stages{
    stage('CheckOutCode'){
    steps{
      sendSlackNotifications("STARTED")
    git branch: 'development', credentialsId: 'bed94d51-4cec-4bf0-83ff-c69b8dfa6209', url: 'https://github.com/devopsmt-jan-2024/maven-web-application2.git'
+   sh "echo The Job name is: ${env.JOB_NAME}"
+   sh "echo The Nod ename is: ${env.NODE_NAME}"
+   sh "echo The Build Number is: ${env.BUILD_NUMBER}"
+   sh "echo The Jenkins Home directory is: ${JENKINS_HOME}"
    }
    }
    

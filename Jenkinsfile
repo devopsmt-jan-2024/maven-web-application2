@@ -5,10 +5,10 @@ pipeline{
   tools {
    maven 'maven3.9.6'
   }
-  echo "The Job name is: ${env.JOB_NAME}"
-  echo "The Nod ename is: ${env.NODE_NAME}"
-  echo "The Build Number is: ${env.BUILD_NUMBER}"
-  echo "The Jenkins Home directory is: ${JENKINS_HOME}"
+  sh "echo The Job name is: ${env.JOB_NAME}"
+  sh "echo The Nod ename is: ${env.NODE_NAME}"
+  sh "echo The Build Number is: ${env.BUILD_NUMBER}"
+  sh "echo The Jenkins Home directory is: ${JENKINS_HOME}"
   
   stages{
    stage('CheckOutCode'){

@@ -20,7 +20,7 @@ pipeline{
    sh "mvn clean package"
    }
    }
-    /*  
+   
    //Execute SonarQube Report
    stage('SonarQube Report'){
    steps{
@@ -43,7 +43,7 @@ pipeline{
    }
    }
    }
-   */
+   
   }//stages closing
   
   post {

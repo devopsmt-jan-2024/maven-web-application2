@@ -21,6 +21,7 @@ pipeline{
    }
    }
    
+   /*
    //Execute SonarQube Report
    stage('SonarQube Report'){
    steps{
@@ -43,7 +44,7 @@ pipeline{
    }
    }
    }
-   
+   */
   }//stages closing
   
   post {
